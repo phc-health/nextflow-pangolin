@@ -30,7 +30,6 @@ process pangolin {
       cat !{fasta} > ultimate_consensus.fasta
 
       pangolin !{params.pangolin_options} \
-        --outdir !{task.process} \
         ultimate_consensus.fasta \
         2>> $err_file >> $log_file
     '''
