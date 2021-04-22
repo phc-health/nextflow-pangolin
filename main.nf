@@ -14,7 +14,7 @@ process pangolin {
     file(fasta) from file(params.in)
 
     output:
-    file("${task.process}/lineage_report.csv") into pangolin_file
+    file('lineage_report.csv') into pangolin_file
     file("logs/${task.process}/${task.process}.${workflow.sessionId}.{log,err}")
 
     shell:
